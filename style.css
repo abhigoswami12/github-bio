@@ -124,6 +124,28 @@ body {
     letter-spacing: 0.03rem;
 
 }
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: aquamarine;
+}
 .user-id {
-    padding: 0.5rem 0;
+    /* padding: 0.5rem 0; */
+    color: white;
+}
+.repos {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin: 1rem 0;
+}
+.repos a {
+    color: white;
+    margin: 1rem 0;
+}
+li {
+    border-bottom: 1px solid white;
+    margin-bottom: 0.5rem;
 }
