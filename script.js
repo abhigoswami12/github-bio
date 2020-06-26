@@ -61,7 +61,7 @@ function main(userName) {
         let reposList = document.createElement("a");
         reposList.target = "_blank";
         reposList.innerText = `Repos: ${user.public_repos}`;
-        reposList.href = '/page2.html'
+        reposList.href = './page2.html'
         userDescription.append(name, idAnchor);
         reposDiv.append(followers, following, reposList);
         userDetails.style.display = "block";
