@@ -130,6 +130,7 @@ a {
 a:hover {
     text-decoration: underline;
     color: aquamarine;
+    cursor: pointer;
 }
 .user-id {
     /* padding: 0.5rem 0; */

@@ -52,13 +52,12 @@ function main(userName) {
         login.classList.add("login");
         login.innerText = `${user.login}`;
 
-        // let idAnchor = document.createElement("a");
-        // idAnchor.href = user.html_url;
-        // idAnchor.target = "_blank";
-        // let id = document.createElement("p");
-        // id.innerText = `ID: ${user.id}`;
-        // idAnchor.classList.add("user-id");
-        // idAnchor.append(id);
+        let idAnchor = document.createElement("a");
+        idAnchor.href = user.html_url;
+        idAnchor.target = "_blank";
+       
+        idAnchor.classList.add("user-id");
+        idAnchor.append(login);
 
         let followers = document.createElement("p");
         let following = document.createElement("p");
@@ -68,7 +67,7 @@ function main(userName) {
         reposList.target = "_blank";
         reposList.innerText = `Repos: ${user.public_repos}`;
         // reposList.href = '/page2.html'
-        userDescription.append(name, login);
+        userDescription.append(name, idAnchor);
         reposDiv.append(followers, following, reposList);
         // userDetails.style.display = "block";
     }
@@ -103,7 +102,7 @@ function main(userName) {
 
                 }
                 let repoDescription = document.createElement("p");
-                repoDescription.innerText = `Creeated on: ${repo.created_at.split("T")[0].split("-").reverse().join("-")}`;
+                repoDescription.innerText = `Created on: ${repo.created_at.split("T")[0].split("-").reverse().join("-")}`;
                 li.append(liAnchor, repoDescription, language);
                 ul.append(li);
             })
@@ -116,6 +115,8 @@ function main(userName) {
         userDescription.append(name,);
         reposDiv.append(followers, following, reposList);
         userDetails.style.display = "block";
+        localStorage.clear();
     
 }
-main("abhigoswami12")
+main(JSON.parse(localStorage.getItem("name")));
+// input.addEventListener("keyup", handleInput);

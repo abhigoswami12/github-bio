@@ -24,7 +24,7 @@ function handleInput(event) {
 // })
 
 function main(userName) {
-    
+    localStorage.setItem("name", JSON.stringify(userName));
     let xhrGithub = new XMLHttpRequest();
     xhrGithub.open("GET", `https://api.github.com/users/${userName}`);
     xhrGithub.onload = function() {
@@ -67,7 +67,7 @@ function main(userName) {
         userDetails.style.display = "block";
     }
 }
-main("abhigoswami12")
+// main("abhigoswami12")
 
 input.addEventListener("keyup", handleInput);
 
